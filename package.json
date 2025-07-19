@@ -1,0 +1,22 @@
+{
+  "name": "fullstack-architecture-on-eks",
+  "version": "0.0.0",
+  "private": true,
+  "description": "AWS EKS上で動作するフルスタックアプリケーションのリファレンスアーキテクチャ",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "test": "turbo test",
+    "lint": "turbo lint",
+    "format": "turbo format",
+    "clean": "turbo clean"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": ">=22.10.0",
+    "pnpm": ">=10.13.1"
+  }
+}
