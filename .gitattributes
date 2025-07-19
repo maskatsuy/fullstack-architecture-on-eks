@@ -1,17 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Explicitly declare text files
-*.md text
-*.txt text
-*.json text
-*.yaml text
-*.yml text
-*.toml text
-*.xml text
-*.sh text eol=lf
-*.bash text eol=lf
-
 # Source code
 *.ts text
 *.tsx text
@@ -26,15 +15,23 @@
 *.h text
 *.hpp text
 
-# Config files
+# Documentation and config files
+*.md text
+*.adoc text
+*.rst text
+*.txt text
+*.json text
+*.toml text
+*.xml text
 *.env text
 *.env.* text
-Dockerfile text
-docker-compose*.yml text
+LICENSE text
+README* text
 .gitignore text
 .gitattributes text
 Makefile text
 *.mk text
+Dockerfile text
 
 # Web files
 *.html text
@@ -44,26 +41,16 @@ Makefile text
 *.less text
 *.svg text
 
-# Documentation
-*.md text
-*.adoc text
-*.rst text
-LICENSE text
-README* text
-
-# Terraform
-*.tf text eol=lf
-*.tfvars text eol=lf
-*.hcl text eol=lf
-
-# Kubernetes/Helm
-*.yaml text eol=lf
-*.yml text eol=lf
-
-# Shell scripts should always use LF
+# Scripts and config with LF line endings
 *.sh text eol=lf
 *.bash text eol=lf
 *.zsh text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.tf text eol=lf
+*.tfvars text eol=lf
+*.hcl text eol=lf
+docker-compose*.yml text eol=lf
 
 # Windows scripts should use CRLF
 *.bat text eol=crlf
@@ -108,6 +95,10 @@ README* text
 # Diff settings
 *.md diff=markdown
 *.rs diff=rust
+*.yaml diff=yaml
+*.yml diff=yaml
+*.toml diff=toml
+*.sql diff=sql
 
 # GitHub Linguist overrides
 docs/* linguist-documentation

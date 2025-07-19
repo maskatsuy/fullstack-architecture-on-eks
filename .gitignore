@@ -21,6 +21,7 @@ out/
 .cache/
 .parcel-cache/
 *.tsbuildinfo
+.turbo/
 
 # ==========================================
 # Testing & Coverage
@@ -164,8 +165,16 @@ temp/
 # Language Specific
 # ==========================================
 # TypeScript/JavaScript
-*.tsbuildinfo
 .eslintcache
+.stylelintcache
+.pnpm-store/
+.yarn-integrity
+.npm/
+.cache-loader/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
 
 # Rust
 Cargo.lock
@@ -177,7 +186,6 @@ debug/
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
 .Python
 pip-log.txt
 pip-delete-this-directory.txt
@@ -191,17 +199,12 @@ env/
 dmypy.json
 .pyre/
 *.egg-info/
-dist/
-htmlcov/
 .tox/
-.coverage
-.coverage.*
 
 # Go
 *.exe
 *.exe~
 *.dll
-*.so
 *.dylib
 *.test
 *.out
@@ -220,7 +223,6 @@ replay_pid*
 gradle-app.setting
 !gradle-wrapper.jar
 .gradletasknamecache
-target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -232,10 +234,7 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 
 # Kotlin
-*.class
 .kotlin/
-build/
-out/
 *.iml
 *.ipr
 *.iws
@@ -273,21 +272,7 @@ Gemfile.lock
 # ==========================================
 # Package managers
 # ==========================================
-.pnpm-store/
-.yarn-integrity
 bower_components/
-
-# ==========================================
-# Build tools
-# ==========================================
-.gradle/
-.eslintcache
-.stylelintcache
-.cache-loader/
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
 
 # ==========================================
 # Docker
@@ -314,11 +299,8 @@ docker-compose.local.yml
 .dynamodb/
 .tern-port
 .vscode-test/
-.yarn-integrity
 *.tgz
-.npm
 .node_repl_history
-.rpt2_cache/
 
 # ==========================================
 # Project specific (keep at the end)
