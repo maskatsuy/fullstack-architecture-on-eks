@@ -9,6 +9,7 @@ end_of_line = lf
 insert_final_newline = true
 charset = utf-8
 trim_trailing_whitespace = true
+indent_style = space
 
 # TypeScript/JavaScript
 [*.{ts,tsx,js,jsx,json}]
@@ -26,7 +27,7 @@ indent_style = space
 indent_size = 2
 
 # Markdown
-[*.md]
+[*.{md,mdx}]
 trim_trailing_whitespace = false
 indent_style = space
 indent_size = 2
