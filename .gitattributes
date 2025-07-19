@@ -1,0 +1,107 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Source code
+*.ts text
+*.tsx text
+*.js text
+*.jsx text
+*.rs text
+*.go text
+*.py text
+*.java text
+*.c text
+*.cpp text
+*.h text
+*.hpp text
+
+# Documentation and config files
+*.md text
+*.adoc text
+*.rst text
+*.txt text
+*.json text
+*.toml text
+*.xml text
+*.env text
+*.env.* text
+LICENSE text
+README* text
+.gitignore text
+.gitattributes text
+Makefile text
+*.mk text
+Dockerfile text
+
+# Web files
+*.html text
+*.css text
+*.scss text
+*.sass text
+*.less text
+*.svg text
+
+# Scripts and config with LF line endings
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.tf text eol=lf
+*.tfvars text eol=lf
+*.hcl text eol=lf
+docker-compose*.yml text eol=lf
+
+# Windows scripts should use CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.ttf binary
+*.otf binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.jar binary
+*.war binary
+*.ear binary
+*.dll binary
+*.exe binary
+*.so binary
+*.dylib binary
+*.wasm binary
+
+# Language specific
+*.pyc binary
+*.pyo binary
+*.mo binary
+*.po binary
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+
+# Diff settings
+*.md diff=markdown
+*.rs diff=rust
+*.yaml diff=yaml
+*.yml diff=yaml
+*.toml diff=toml
+*.sql diff=sql
+
+# GitHub Linguist overrides
+docs/* linguist-documentation
+*.sql linguist-language=SQL
+*.hcl linguist-language=HCL
+Dockerfile linguist-language=Dockerfile
