@@ -31,7 +31,7 @@
 
 ### 2. Biome（Rust製の統合ツール）
 - **利点**: 
-  - Prettierの25倍高速（Rust製、マルチスレッド）
+  - Prettierの25倍高速（Rust製、マルチスレッド）[^1]
   - フォーマッターとリンターを統合
   - Prettier互換モードで移行が容易
   - 97%のPrettier互換性
@@ -105,3 +105,5 @@
 - [Biome公式ドキュメント](https://biomejs.dev/)
 - [Biome vs Prettier比較](https://biomejs.dev/formatter/differences-with-prettier/)
 - [Migrating from Prettier and ESLint](https://biomejs.dev/guides/migrate-eslint-prettier/)
+
+[^1]: [Biome公式ブログ - パフォーマンスベンチマーク](https://biomejs.dev/blog/biome-wins-prettier-challenge/)

@@ -50,8 +50,8 @@ AWS EKS上で動作するフルスタックアプリケーションのリファ�
 ### Dev Tools
 - **pnpm** (パッケージマネージャー)
 - **Turborepo** (モノレポツール)
-- **Biome** (フォーマッター・リンター)
-- **Prettier** (YAML/Markdown用)
+- **Biome** (フォーマッター・リンター - TypeScript/JavaScript/GraphQL/CSS用)
+- **Prettier** (YAML/Markdown用 - Biome未対応ファイル専用)
 - **GitHub Copilot**
 - **Figma**
 - **Storybook**
@@ -178,7 +178,12 @@ fullstack-architecture-on-eks/
 
 ```bash
 # pnpmのインストール（未インストールの場合）
-npm install -g pnpm@10.13.1
+# 推奨: corepackを使用（Node.js 16.13以降）
+corepack enable
+corepack prepare pnpm@10.13.1 --activate
+
+# または: グローバルインストール
+# npm install -g pnpm@10.13.1
 
 # 依存関係のインストール（Turborepo が全てのワークスペースを管理）
 pnpm install
@@ -203,13 +208,13 @@ cargo run
 # テストの実行
 pnpm test
 
-# コードフォーマット
-pnpm format          # 自動修正
-pnpm format:check    # チェックのみ
-
-# リント
-pnpm lint           # 自動修正
+# コードフォーマット・リント
+pnpm lint           # フォーマットとリントを同時に実行（推奨）
 pnpm lint:check     # チェックのみ
+
+# フォーマットのみ実行したい場合
+pnpm format         # フォーマットのみ自動修正
+pnpm format:check   # フォーマットチェックのみ
 
 # 新しいパッケージの追加例
 pnpm add axios --filter=frontend

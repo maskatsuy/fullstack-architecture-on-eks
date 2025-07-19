@@ -6,7 +6,15 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignore": ["**/node_modules", "**/dist", "**/.next", "**/target"],
+    "ignore": [
+      "**/node_modules",
+      "**/dist",
+      "**/.next",
+      "**/target",
+      "**/coverage",
+      "**/build",
+      "**/.turbo"
+    ],
     "include": [
       "**/*.js",
       "**/*.jsx",
@@ -62,7 +70,7 @@
       },
       "suspicious": {
         "noExplicitAny": "warn",
-        "noConsoleLog": "warn"
+        "noConsoleLog": "error"
       }
     }
   },
