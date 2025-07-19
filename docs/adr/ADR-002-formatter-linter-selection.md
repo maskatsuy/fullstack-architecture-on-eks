@@ -1,10 +1,8 @@
 # ADR-002: フォーマッター・リンターツールの選定
 
-## ステータス
-採用（Accepted）
-
-## 日付
-2025-07-19
+- Status: Accepted
+- Date: 2025-07-19
+- Deciders: [@maskatsuy]
 
 ## コンテキスト
 本プロジェクトでは、TypeScript/JavaScript、GraphQL、CSSなど複数の言語を使用するモノレポ構成において、統一的なコードスタイルとコード品質の維持が必要である。開発効率とコード品質の両立を図るため、適切なフォーマッター・リンターツールの選定が求められる。
@@ -32,6 +30,8 @@
 ### 2. Biome（Rust製の統合ツール）
 - **利点**: 
   - Prettierの25倍高速（Rust製、マルチスレッド）[^1]
+    - 公式ベンチマーク: 96,000ファイル（~650MB）をPrettier 10.3秒 vs Biome 0.4秒
+    - 環境: Linux 5.19, AMD Ryzen 5950X, 64GB RAM
   - フォーマッターとリンターを統合
   - Prettier互換モードで移行が容易
   - 97%のPrettier互換性
@@ -78,8 +78,14 @@
 
 2. **補助ツール**:
    - YAML: yamlfmt または prettier（YAML専用）
+     - コマンド: `pnpm format:yaml`
+     - VSCode: `defaultFormatter: "esbenp.prettier-vscode"`
    - Markdown/MDX: markdownlint-cli2
+     - コマンド: `pnpm lint:md`
+     - VSCode: `defaultFormatter: "esbenp.prettier-vscode"`
    - Rust: rustfmt（標準ツール）
+     - コマンド: `cargo fmt`
+     - VSCode: rust-analyzer拡張機能が自動処理
 
 3. **段階的移行**:
    - 初期設定はPrettier互換モードを使用
@@ -88,6 +94,7 @@
 4. **CI/CD統合**:
    - `biome check`でフォーマットとリントを一括実行
    - プルリクエスト時の自動チェック
+   - CI実行順: 1) `biome check` 2) `yamlfmt` 3) `markdownlint` 4) `cargo fmt --check`
 
 ## 影響
 - **ポジティブ**: 
